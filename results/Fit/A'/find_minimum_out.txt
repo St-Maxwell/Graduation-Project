@@ -1,0 +1,265 @@
+  Initial Guess:
+  R = 4.0 Ang
+  Theta = 90 Deg
+
+  Linear searches             0
+  Function evaluations        1
+
+X:
+   4.00000       1.57080
+
+  The function value FX:   -120.304
+
+  The second difference array:
+
+         1    0.49303807E-31
+         2    0.49303807E-31
+
+  Linear searches             4
+  Function evaluations       12
+
+X:
+   3.97000       1.59080
+
+  The function value FX:   -124.771
+
+  Principal values of the quadratic form:
+
+         1    0.16833373E-30
+         2    0.28881501E-31
+
+  The second difference array:
+
+         1    0.49303807E-31
+         2    0.49303807E-31
+
+  Linear searches             8
+  Function evaluations       23
+
+X:
+   3.94004       1.57073
+
+  The function value FX:   -128.116
+
+  Principal values of the quadratic form:
+
+         1     3.8925465
+         2    0.49303807E-31
+
+  The second difference array:
+
+         1    0.49303807E-31
+         2    0.49303807E-31
+
+  Linear searches            12
+  Function evaluations       35
+
+X:
+   3.90713       1.56551
+
+  The function value FX:   -132.257
+
+  Principal values of the quadratic form:
+
+         1     36.717365
+         2    0.49303807E-31
+
+  The second difference array:
+
+         1    0.49303807E-31
+         2     2.3781364
+
+  Linear searches            17
+  Function evaluations       49
+
+X:
+   3.83890       1.55136
+
+  The function value FX:   -140.540
+
+  Principal values of the quadratic form:
+
+         1     119.90917
+         2    0.49303807E-31
+
+  The second difference array:
+
+         1     49.684064
+         2     56.460360
+
+  Linear searches            22
+  Function evaluations       62
+
+X:
+   3.73558       1.52330
+
+  The function value FX:   -151.435
+
+  Principal values of the quadratic form:
+
+         1     316.95159
+         2     48.054520
+
+  The second difference array:
+
+         1     159.08041
+         2     223.06342
+
+  Linear searches            27
+  Function evaluations       74
+
+X:
+   3.62053       1.52100
+
+  The function value FX:   -160.691
+
+  Principal values of the quadratic form:
+
+         1     374.80636
+         2     40.396239
+
+  The second difference array:
+
+         1     565.81915
+         2     214.44449
+
+  Linear searches            32
+  Function evaluations       86
+
+X:
+   3.51998       1.57842
+
+  The function value FX:   -166.982
+
+  Principal values of the quadratic form:
+
+         1     1487.9567
+         2     236.04385
+
+  The second difference array:
+
+         1     336.26312
+         2     384.63114
+
+  Linear searches            37
+  Function evaluations       98
+
+X:
+   3.50731       1.61218
+
+  The function value FX:   -168.645
+
+  Principal values of the quadratic form:
+
+         1     1071.1974
+         2     176.89103
+
+  The second difference array:
+
+         1     416.14629
+         2     419.03188
+
+  Linear searches            42
+  Function evaluations      110
+
+X:
+   3.52107       1.68495
+
+  The function value FX:   -170.688
+
+  Principal values of the quadratic form:
+
+         1     1167.7840
+         2     193.46361
+
+  The second difference array:
+
+         1     532.37910
+         2     265.29563
+
+  Linear searches            47
+  Function evaluations      122
+
+X:
+   3.53887       1.69675
+
+  The function value FX:   -170.825
+
+  Principal values of the quadratic form:
+
+         1     519.60208
+         2     254.27543
+
+  The second difference array:
+
+         1     527.95850
+         2     242.52886
+
+  Linear searches            52
+  Function evaluations      134
+
+X:
+   3.53876       1.69674
+
+  The function value FX:   -170.825
+
+  Principal values of the quadratic form:
+
+         1     528.40534
+         2     242.58613
+
+  The second difference array:
+
+         1    0.49303807E-31
+         2     242.62869
+
+  Linear searches            58
+  Function evaluations      163
+
+X:
+   3.53876       1.69674
+
+  The function value FX:   -170.825
+
+  Principal values of the quadratic form:
+
+         1     21.039518
+         2    0.49303807E-31
+
+  The second difference array:
+
+         1     524.87818
+         2     245.83272
+
+  Linear searches            62
+  Function evaluations      175
+
+X:
+   3.53876       1.69674
+
+  The function value FX:   -170.825
+
+  Principal values of the quadratic form:
+
+         1     545.33519
+         2     239.31559
+
+  The second difference array:
+
+         1     519.56841
+         2    0.49303807E-31
+
+  Linear searches            66
+  Function evaluations      197
+
+X:
+   3.53876       1.69674
+
+  The function value FX:   -170.825
+
+  X:
+
+         1     3.5387624
+         2     1.6967356
+ PES Minimum = -170.83 cm-1
+ R = 3.539 Ang  Theta = 97.22 Deg
