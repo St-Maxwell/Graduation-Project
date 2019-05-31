@@ -1,0 +1,31 @@
+molecule NCOAr{
+  0 1
+  Ar 0.0 0.0 R
+  --
+  0 2
+  C 0.0 0.0 0.0
+  N 0.0 0.0 1.231991
+  O 0.0 0.0 -1.175455
+}
+
+Rvars = [4.0,4.2,4.4,4.6,4.8,5.0,5.2,5.4,5.6,5.8,6.0,6.2,6.4,6.6,6.8,7.0]
+autocm = 219474.63067
+
+table=Table(rows=["R"], cols=["E(Ele)","E(Ex)","E(Ind)","E(Disp)","E(SAPT0)"])
+
+set {
+  basis = aug-cc-pvdz
+  reference = UHF
+}
+
+for R in Rvars:
+  NCOAr.R = R - 0.036898
+  energy('sapt0')
+  eele = get_variable('SAPT ELST ENERGY') * autocm
+  eex = get_variable('SAPT EXCH ENERGY') * autocm
+  eind = get_variable('SAPT IND ENERGY') * autocm
+  edisp = get_variable('SAPT DISP ENERGY') * autocm
+  esapt0 = get_variable('SAPT TOTAL ENERGY') * autocm
+  table[R] = [eele,eex,eind,edisp,esapt0]
+
+print(table)

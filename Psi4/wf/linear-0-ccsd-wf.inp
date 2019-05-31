@@ -1,0 +1,21 @@
+molecule NCOAr{
+  0 2
+  Ar 0.0 0.0 R
+  C 0.0 0.0 0.0
+  N 0.0 0.0 1.231991
+  O 0.0 0.0 -1.175455
+  no_reorient
+  no_com
+}
+
+set {
+  basis = may-cc-pVTZ
+  reference = UHF
+  guess = sad
+}
+
+NCOAr.R = -4.661 - 0.036898
+
+grad, wfn = gradient('CCSD', return_wfn=True)
+fchk_writer = psi4.FCHKWriter(wfn)
+fchk_writer.write('NCOAr-0-ccsd.fchk')

@@ -1,0 +1,14 @@
+memory 2 GB
+
+molecule {
+  0 2
+  C 0.0 0.0 0.0
+  N 0.0 0.0 1.22
+  O 0.0 0.0 -1.15
+}
+
+set {
+  basis = def2-TZVP
+  reference = UKS
+}
+optimize('PWPB95-D3BJ')

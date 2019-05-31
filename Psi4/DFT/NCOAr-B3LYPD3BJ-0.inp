@@ -1,0 +1,29 @@
+molecule NCOAr{
+  0 1
+  Ar 0.0 0.0 R
+  --
+  0 2
+  C 0.0 0.0 0.0
+  N 0.0 0.0 1.231991
+  O 0.0 0.0 -1.175455
+}
+
+autocm = 219474.63067
+
+table=Table(rows=["R"], cols=["Interaction Energy"])
+
+set {
+  basis = def2-TZVPD
+  reference = UKS
+  basis_guess def2-SVP
+  guess sad
+}
+R = 4.0
+for i in range(16):
+  NCOAr.R = -R - 0.036898
+  energy('B3LYP-D3BJ', bsse_type='cp')
+  eint = get_variable('CP-CORRECTED 2-BODY INTERACTION ENERGY') * autocm
+  table[R] = [eint]
+  R += 0.2
+
+print(table)

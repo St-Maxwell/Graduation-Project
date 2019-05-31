@@ -1,0 +1,18 @@
+molecule Ar{
+  0 1
+  Ar 0.0 0.0 R
+  no_reorient
+  no_com
+}
+
+set {
+  basis = may-cc-pVTZ
+  reference = UHF
+  guess = sad
+}
+
+Ar.R = -4.661 - 0.036898
+
+grad, wfn = gradient('CCSD', return_wfn=True)
+fchk_writer = psi4.FCHKWriter(wfn)
+fchk_writer.write('Ar-0-ccsd.fchk')

@@ -1,0 +1,16 @@
+MEMORY,1000,M
+print, basis, orbitals
+angstrom
+geometry={
+q1
+C,q1,1.0
+N,C,1.22637,q1,90
+O,C,1.17511,q1,90,N,180
+}
+basis=cc-pvqz
+{hf
+open,2.3
+wf,21,3,1
+}
+rccsd(t)
+optg
