@@ -1,0 +1,68 @@
+MEMORY,1000,M
+print, basis, orbitals
+angstrom
+geometry={
+q1
+q2,q1,rqq
+C,q1,rcq1,q2,acq2
+N,q1,rnq1,q2,anq2,C,dnc
+O,q1,roq1,q2,aoq2,C,doc
+Ar,q1,rarq,O,aaro,q2,darq
+}
+rqq=1.0
+rcq1=0.036898
+rnq1=1.268889
+roq1=1.138557
+acq2=90
+anq2=90
+aoq2=90
+dnc=0
+doc=180
+darq=180 ! variables always fixed
+
+rarq=4.2 ! scan
+aaro=0  ! fixed here
+
+do i=1,4
+
+text,calculation for complex
+basis=cc-pvdz
+set,charge=-1
+{hf
+save,2100.2
+}
+basis=aug-cc-pvqz
+set,charge=0
+{hf
+open,4.3
+wf,39,3,1 ! Cs group
+start,2100.2
+}
+rccsd(t)
+e_NCOAr(i)=energy
+
+text,cp calculation for NCO
+dummy,Ar
+{hf
+open,2.3
+wf,21,3,1
+}
+rccsd(t)
+e_NCO(i)=energy
+
+text, cp calculation for Ar
+dummy,N,C,O
+hf
+rccsd(t)
+e_Ar(i)=energy
+
+de_cp(i)=(e_NCOAr(i)-e_NCO(i)-e_Ar(i))*tocm
+r(i)=rarq
+rarq=rarq+0.2
+enddo
+
+{table,r,de_cp,e_NCOAr,e_NCO,e_Ar
+head,R,E_cp,E_complex,E_NCO,E_Ar
+save,PES_0-qz.tab
+title,Result for angle 0
+}

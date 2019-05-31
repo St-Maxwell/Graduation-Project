@@ -1,0 +1,58 @@
+MEMORY,1000,M
+print, basis, orbitals
+angstrom
+geometry={
+q1
+q2,q1,rqq
+C,q1,rcq1,q2,acq2
+N,q1,rnq1,q2,anq2,C,dnc
+O,q1,roq1,q2,aoq2,C,doc
+Ar,q1,rarq,O,aaro,q2,darq
+}
+rqq=1.0
+rcq1=0.036898
+rnq1=1.268889
+roq1=1.138557
+acq2=90
+anq2=90
+aoq2=90
+dnc=0
+doc=180
+darq=180 ! variables always fixed
+
+rarq=2.8 ! scan
+aaro=15  ! fixed here
+
+basis=cc-pvdz
+set,charge=-1
+{hf
+save,2100.2
+}
+
+basis=aug-cc-pvtz
+set,charge=0
+text,calculation for complex
+{hf
+open,16.1
+wf,39,1,1 ! 1: A' state in Cs group
+start,2100.2
+}
+rccsd(t)
+e_NCOAr=energy
+
+text,cp calculation for NCO
+dummy,Ar
+{hf
+open,9.1
+wf,21,1,1
+}
+rccsd(t)
+e_NCO=energy
+
+text, cp calculation for Ar
+dummy,N,C,O
+hf
+rccsd(t)
+e_Ar=energy
+
+de_cp=(e_NCOAr-e_NCO-e_Ar)*tocm
